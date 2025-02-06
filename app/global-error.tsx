@@ -1,12 +1,18 @@
 "use client";
 
+import React from "react";
+
 export default function GlobalError({ error }: { error: Error & { digest?: string } }) {
-    // return <div>Error: {error.message}</div>;
     return (
-        <html>
-            <body>
-                <h2>Global Error</h2>
-            </body>
+        <html lang="en">
+        <head>
+            <title>Global Error</title>
+        </head>
+        <body>
+        <h2>Global Error</h2>
+        <p>{error.message}</p>
+        </body>
         </html>
     );
 }
+
